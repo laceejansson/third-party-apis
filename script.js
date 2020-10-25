@@ -9,6 +9,7 @@ function currentTime() {
 }
 
 var now = currentTime() 
-console.log(now)
 
-$("#testing").hide();
+$(document).ready(function(){
+    $(`#${hours}`).css("background-color", "red")();
+  });
