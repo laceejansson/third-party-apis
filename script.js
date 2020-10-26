@@ -12,10 +12,10 @@ var now = currentTime()
 
 $(document).ready(function(){
     $(`#${hours}`).addClass("present");
+    $("#9").val(localStorage.getItem("9"));
     if (hours >9) {
         $(`#9`).addClass("past");
     } 
-
     if (hours >10) {
         $(`#10`).addClass("past");
     } else if (hours < 10) {
@@ -69,6 +69,14 @@ $(document).ready(function(){
     } else if (hours < 18) {
         $("#18").addClass("future");
     }
+
     
+    
+    $(".saveBtn").click(function(){
+        var id = $(this).parent().find('input').attr('id')
+        var value = $(this).parent().find('input').val()
+        localStorage.setItem(id,value)  
+    });
+
   });
 
