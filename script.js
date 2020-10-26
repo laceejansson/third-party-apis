@@ -11,6 +11,8 @@ function currentTime() {
 var now = currentTime() 
 
 $(document).ready(function(){
+    $("#currentTime").val(moment().format())
+
     $(`#${hours}`).addClass("present");
 
     $("#9").val(localStorage.getItem("9"));
@@ -82,3 +84,4 @@ $(document).ready(function(){
 
   });
 
+console.log(moment().format())
